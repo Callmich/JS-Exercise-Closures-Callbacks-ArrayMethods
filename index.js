@@ -294,8 +294,18 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
+function counterMakerWithLimit(maxNum) {
+  let count = -1;
+  return function counter(){
+    if (count === maxNum){
+      count =0
+    }
+    else{
+      count++
+    }
+    return count;
+  }
+
 }
 
 /////////////// END OF CHALLENGE ///////////////
